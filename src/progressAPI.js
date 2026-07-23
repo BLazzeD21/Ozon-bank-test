@@ -6,15 +6,17 @@ export class Progress {
     this.root = document.querySelector(root);
     this.arc = this.root.querySelector(".progress__arc");
 
-    const radius = this.arc.r.baseVal.value;
-    this.circumference = 2 * Math.PI * radius;
-    this.arc.style.strokeDasharray = this.circumference;
+    this.circumference = 2 * Math.PI * this.arc.r.baseVal.value;
 
     this.root.style.setProperty("--progress-period", `${period}ms`);
 
     this.setValue(value);
     this.setAnimated(animated);
     this.setHidden(hidden);
+
+    requestAnimationFrame(() => {
+      this.root.classList.add("progress--ready");
+    });
   }
 
   setValue(value) {

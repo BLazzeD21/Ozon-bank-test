@@ -117,6 +117,9 @@ body {
 .progress__arc {
   stroke: var(--color-accent);
   stroke-linecap: butt;
+}
+
+.progress--ready .progress__arc {
   transition: stroke-dashoffset 0.2s ease;
 }
 
