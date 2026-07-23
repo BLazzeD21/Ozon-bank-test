@@ -1,3 +1,5 @@
+import { Progress } from "./progressAPI.js";
+
 const progress = new Progress("#progress", {
   value: 0,
   animated: false,
@@ -17,7 +19,7 @@ valueInput.addEventListener("input", () => {
 });
 
 valueInput.addEventListener("blur", () => {
-  if (valueInput.value === ""){
+  if (valueInput.value === "") {
     valueInput.value = 0;
     progress.setValue(0);
     return;

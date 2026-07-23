@@ -1,4 +1,4 @@
-class Progress {
+export class Progress {
   constructor(
     root,
     { value = 0, animated = false, hidden = false, period = 2000 } = {},
