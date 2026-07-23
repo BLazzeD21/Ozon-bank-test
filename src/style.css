@@ -72,6 +72,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 140px;
+  height: 140px;
+  flex: 0 0 auto;
 }
 
 .app__controls {
