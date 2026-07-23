@@ -17,6 +17,12 @@ valueInput.addEventListener("input", () => {
 });
 
 valueInput.addEventListener("blur", () => {
+  if (valueInput.value === ""){
+    valueInput.value = 0;
+    progress.setValue(0);
+    return;
+  }
+
   valueInput.value = progress.getValue();
 });
 
