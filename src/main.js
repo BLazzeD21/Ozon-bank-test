@@ -1,4 +1,4 @@
-import { Progress } from "./progressAPI.js";
+import { Progress } from "./components/Progress";
 
 const progress = new Progress("#progress", {
   value: 0,
