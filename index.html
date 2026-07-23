@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Progress</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="app">
+        <header class="app__header">
+          <h1 class="app__title">Progress</h1>
+        </header>
+
+        <main class="app__main">
+          <div class="app__progress">
+            <div class="progress" id="progress">
+              <svg class="progress__svg" viewBox="0 0 100 100">
+                <circle class="progress__track" cx="50" cy="50" r="40"></circle>
+                <circle class="progress__arc" cx="50" cy="50" r="40"></circle>
+              </svg>
+            </div>
+          </div>
+          <div class="app__controls">
+            <div class="control">
+              <input
+                class="control__input"
+                id="value-input"
+                type="number"
+                inputmode="numeric"
+                min="0"
+                max="100"
+                maxlength="100"
+                step="1"
+                value="0"
+                aria-label="Value"
+              />
+              <span class="control__label">Value</span>
+            </div>
+            <div class="control">
+              <button
+                class="switch"
+                id="animate-toggle"
+                type="button"
+                role="switch"
+                aria-checked="false"
+                aria-label="Animate"
+              >
+                <span class="switch__thumb"></span>
+              </button>
+              <span class="control__label">Animate</span>
+            </div>
+            <div class="control">
+              <button
+                class="switch"
+                id="hide-toggle"
+                type="button"
+                role="switch"
+                aria-checked="false"
+                aria-label="Hide"
+              >
+                <span class="switch__thumb"></span>
+              </button>
+              <span class="control__label">Hide</span>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script src="src/progressAPI.js"></script>
+    <script src="src/main.js"></script>
+  </body>
+</html>
